@@ -1,0 +1,145 @@
+
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+
+  --mainWhite: #f5f3ed;
+  --brightWhite: #ffffff;
+  --mainBlack: #354442;
+  --lightBlack: #475855;
+  --darkBlack: #070d1d;
+  --mainGreen: #87aa35;
+  --darkGreen: #446441;
+  --lightGreen: #a1b53c;
+  --transpGreen: #a1b53c98;
+  --mainYellow: #edc14d;
+  --darkYellow: #d2a84d;
+  --mainRed: #cb5667;
+  --brightRed: #d63a51;
+  --lightRed: #cc8792;
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: max-content;
+  min-height: fit-content;
+  padding: 0px 10px;
+  font-family: var(--font-geist-sans);
+  overflow-x: hidden;
+}
+
+.topfold {
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  background: var(--mainWhite);
+}
+
+.topfoldTitle {
+  text-shadow: -2px -2px 0 var(--mainBlack), 2px -2px 0 var(--mainBlack), -2px 2px 0 var(--mainBlack), 2px 2px 0 var(--mainBlack);
+  font-size: 36px;
+  color: var(--brightWhite);
+}
+
+.logo{
+  height: fit-content;
+  width: 220px;
+  margin-bottom: 25px;
+}
+
+.logo #logoIcon{
+  max-width: 100%;
+  margin-bottom: auto;
+}
+.redirect{
+  font-family: 'Lemon-Days', 'Arial', sans-serif;
+  color: var(--mainWhite);
+  font-size: 32px;
+  text-align: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  letter-spacing: 1px;
+
+  width: 200px;
+  padding: 8px;
+  margin: 10px;
+  margin-bottom: 50px;
+
+  border: 2px solid var(--mainBlack);
+  border-radius: 5px;
+  background:  var(--darkGreen);
+  opacity: 1;
+  transition: all .1s ease;
+}
+  .redirect:hover{
+    opacity: .6;
+  }
+  .featureContainer{
+    width: 100%;
+    background: var(--mainWhite);
+    height: 300px;
+    max-width: 95vw;
+  }
+  .partition{
+    display: flex;
+    height: 5px;
+    width: 100%;
+    background: repeat url(./src/img/background/fruit-chain-edited.png);
+    background-size: contain;
+    filter:invert(.2) blur(2px); 
+  }
+  .partition#final{
+    margin-top: 80px;
+  }
+  .contactSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: min(75%, 750px);
+    min-width: fit-content;
+    text-align: center;
+    padding: 20px 0px;
+    background: var(--mainWhite);
+    border-bottom: 1px solid var(--mainBlack);
+
+  }
+  .contactSection #title {
+    color: var(--mainYellow);
+    text-shadow: -1.5px -1.5px 0 var(--mainBlack), 1.5px -1.5px 0 var(--mainBlack), -1.5px 1.5px 0 var(--mainBlack), 1.5px 1.5px 0 var(--mainBlack);
+    border-bottom: 1px solid var(--mainBlack);
+    text-underline-offset: 4px;
+    font-size: 36px;
+    width: 320px;
+  }
+
+  .contactSection #buttonContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: max(20px, 5vw);
+  }
+/*@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+    .redirect{
+      background: radial-gradient(#24242486, #242424, #24242486);
+}*/
+
+
+
+

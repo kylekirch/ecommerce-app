@@ -1,0 +1,163 @@
+/* Footer.css */
+:root {
+  --mainWhite: #f5f3ed;
+  --brightWhite: #ffffff;
+
+  --mainBlack: #354442;
+  --lightBlack: #475855;
+  --darkBlack: #070d1d;
+  --mainGreen: #87aa35;
+  --darkGreen: #446441;
+  --lightGreen: #a1b53c;
+  --transpGreen: #a1b53c98;
+  --mainYellow: #edc14d;
+  --darkYellow: #d2a84d;
+  --mainRed: #cb5667;
+  --brightRed: #d63a51;
+  --lightRed: #cc8792;
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
+}
+/* Ensure the footer sticks to the bottom */
+.footer {
+  background: var(--brightWhite); /* Dark background for contrast */
+  color: var(--mainBlack); /* Light text */
+  padding: 10px;
+  font-family: 'Lemon-Days', 'Arial', sans-serif; /* Fallback */
+}
+
+/* Main container for footer sections */
+.footer-container {
+  border-radius: 10px;
+  background: var(--mainWhite);
+  display: flex;
+  flex-wrap: wrap; /* Responsive */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-shadow: -2px -2px 0 var(--mainBlack), 2px -2px 0 var(--mainBlack), -2px 2px 0 var(--mainBlack), 2px 2px 0 var(--mainBlack);
+
+
+}
+
+/* Individual sections (brand, links, social) */
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+
+/* Branding section */
+.footer-brand .footer-title {
+  font-size: 36px;
+  color: var(--brightWhite);
+}
+
+.footer-brand p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: var(--mainBlack);
+  text-shadow: none;
+}
+
+/* Links section */
+.footer-links h4 {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 24px;
+  color: var(--mainYellow); /* Yellow for contrast */
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  text-shadow: none;
+  text-decoration: underline 2px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--mainRed); /* Coral on hover */
+}
+
+/* Social section */
+.footer-social h4 {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 24px;
+  color: var(--mainYellow);
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+
+}
+.social-icon#x {
+  background: url(../../component_src/img/utility/x-icon.png) no-repeat;
+  background-size: contain;
+
+}
+.social-icon#instagram {
+  background: url(../../component_src/img/utility/instagram-icon.jpg) no-repeat;
+  background-size: contain;
+
+}
+.social-icon#facebook {
+  background: url(../../component_src/img/utility/facebook-icon.png) no-repeat;
+  background-size: contain;
+
+}
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+/* Bottom copyright */
+.footer-bottom {
+  text-align: center;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  border-top: 1px solid var(--mainBlack);
+  font-size: 14px;
+  background-color: var(--mainWhite);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+}

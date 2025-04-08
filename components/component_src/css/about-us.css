@@ -1,0 +1,48 @@
+/*Global About Section Styles*/
+.about-us{
+padding: 30px 0;
+margin: 60px 0;
+border: 2px solid var(--darkGreen);
+border-radius: 5px;
+min-width: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: var(--mainWhite);
+text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+background: var(--darkGreen);
+}
+  #main-text{
+    max-width: 730px;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+    #main-text #emphasize{
+      color: var(--mainYellow);
+      font-style: oblique;
+      font-size: 32px;
+    }
+  #sub-text{
+    max-width: 720px;
+    font-size: 23px;
+  }
+
+/*screen size under 760px*/
+@media (max-width: 760px) { 
+  .about-us{
+    padding: 40px 20px;
+  }
+    #main-text{
+      font-size: 4vw;
+    }
+      #main-text #emphasize{
+        font-size: 5vw;
+      }
+    #sub-text{
+      font-size: 3vw;
+      letter-spacing: 1px;
+      color: white;
+    }
+}

@@ -1,0 +1,155 @@
+/*Global Feature Banner Styles*/
+.feature{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: hidden;
+  background-color: var(--mainWhite);
+  width: 100%;
+  height: 100%;
+}
+  #more{
+    color: var(--mainYellow);
+    background-color: var(--mainWhite);
+    font-size: 24px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-style:oblique;
+    display: flex;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 10px;
+    text-align: center;
+    border-bottom: 1.5px solid var(--darkGreen);
+  }
+  .product-row{
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-y: hidden; /* Hide scrollbars */
+    overflow-x: scroll;
+    gap: 8%;
+    height: 200px;
+  }
+
+  .product-row::-webkit-scrollbar {
+    height: 15px;
+    width: 10px; /* Width of the scrollbar */
+  }
+
+  .product-row::-webkit-scrollbar-track {
+    background: transparent; /* Black track */
+  }
+
+  .product-row::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, var(--mainWhite) 35%, var(--mainBlack) 45%, transparent 45%);
+  }
+    .product-img{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: min(20%,250px);
+      min-width: 200px;
+      background-position: center;
+      border: 1px solid var(--mainBlack);
+      border-radius: 4px;
+      text-align: center;
+    }
+    .product-img .flag{
+      height: 12px;
+      margin: 0px 5px;
+      margin-right: -5px;
+    }
+      .product-img#img-1{
+        background: url('../img/products/white-background/cloudberry.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      .product-img#img-2{
+        background: url('../img/products/white-background/rambutan.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      .product-img#img-3{
+        background: url('../img/products/white-background/guava.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      .product-img#img-4{
+        background: url('../img/products/white-background/prickly-pear.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      .product-img#img-5{
+        background: url('../img/products/white-background/papaya.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      .product-name {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-color: var(--lightBlack);
+        color: var(--mainWhite);
+        text-shadow: -1px -1px 0 var(--mainBlack), 1px -1px 0 var(--mainBlack), -1px 1px 0 var(--mainBlack), 1px 1px 0 var(--mainBlack);
+
+        font-size: 16px;
+        box-shadow: 1px 1px 1px 1px var(--mainBlack);
+
+        height: 24px;
+        padding: 0 10px;
+        border-radius: 0px 0px 4px 4px ;
+      }
+
+      .tag #text{
+        font-size: 14px;
+      }
+
+      @media (min-width: 1910px) { 
+        .product-row{
+          justify-content: center;
+        }
+      }
+
+
+
+  /*Global Discount Banner Styles*/
+.discount{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  height: 30px;
+  width: 100%;
+  background-color: var(--mainRed);
+  border: 1px solid var(--mainBlack);
+  border-radius: 4px ;
+
+} 
+.tag{
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  height: 20px;
+  width: 100%;
+  background-color: var(--mainYellow);
+  border-top: 1px solid var(--darkGreen);
+  border-radius:  0px 0px 4px 4px;
+  font-size: 12px;
+} 
+.tag.discount{
+  background-color: var(--mainRed);
+} 
+
+
+  .discount #text{
+    color: var(--mainWhite);
+    font-size: 16px;
+    font-style: oblique;
+  }

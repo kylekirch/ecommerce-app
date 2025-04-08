@@ -1,0 +1,233 @@
+:root {
+  --mainWhite: #f5f3ed;
+  --brightWhite: #ffffff;
+  --mainBlack: #354442;
+  --lightBlack: #475855;
+  --darkBlack: #070d1d;
+  --mainGreen: #87aa35;
+  --darkGreen: #446441;
+  --lightGreen: #a1b53c;
+  --transpGreen: #a1b53c98;
+  --mainYellow: #edc14d;
+  --darkYellow: #d2a84d;
+  --mainRed: #cb5667;
+  --brightRed: #d63a51;
+  --lightRed: #cc8792;
+
+}
+
+@font-face {
+  font-family: 'Lemon-Days';
+  src: url('./src/fonts/lemon_days/Lemon_Days.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+funky-text {
+  font-family: 'Lemon-Days', sans-serif; /* Fallback to sans-serif */
+  font-size: 36px;
+  color: var(--mainBlack);
+}
+/*@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0e0d0d;
+    --foreground: #ededed;
+  }
+}*/
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: fit-content;
+  color: var(--foreground);
+  background: var(--background);
+  background: url(./src/img/background/fruit-wallpaper.jpg) repeat;
+  backdrop-filter: blur(3px);
+  background-size: contain;
+  font-family: 'Lemon-Days', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main{
+  min-height: 100vh;
+  background-color: var(--brightWhite);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+
+  /*Global Header Banner Styles*/
+.header-container{
+  display: flex;
+  background: var(--darkGreen);
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  height: 75px;
+
+  color: white;
+  transform: translateZ(0);
+}
+
+  .header-section-main, .header-section-sub{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+  }
+    .header-section-main{
+      width: 50%;
+      gap: min(100px, 12%);
+    }
+    .header-section-sub{
+      width: 25%;
+    }
+      .header-section-main .banner-button{
+        width: 110px;
+        padding: 6px;
+        background-color: var(--transpGreen);
+        border-radius: 4px;
+        border: 1px solid var(--mainBlack);
+        color: var(--mainWhite);
+        box-shadow: 0 1px 2px var(--darkBlack);
+        text-align: center;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      }
+
+      .header-section-main .banner-button#icon-button{
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        width: 40px;
+        height: 40px;
+
+      }
+      .header-section-main .banner-button#icon-button #home{
+        width: 30px;
+        height: 30px;
+        background: url('../components/component_src/img/utility/home-icon.png') no-repeat;
+        background-size: contain;
+        background-position: center;
+
+      }
+      .header-section-main .banner-button#icon-button #cart{
+        width: 30px;
+        height: 30px;
+        background: url('../components/component_src/img/utility/cart-icon.png') no-repeat;
+        background-size: contain;
+        background-position: center;
+
+      }
+    .header-section-sub{
+      color: var(--mainYellow);
+      padding: 0 min(75px, 3vw);
+      align-items: center;
+      gap: min(2%, 10px);
+    }
+      .header-section-sub#logo-items{
+        padding-right: 0;
+        justify-content: flex-start;
+      }
+      .header-section-sub#user-info-items{
+        padding-left: 0;
+        justify-content: flex-end;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 2px 0 #000, 1px 1px 0 #000;
+      }
+      .header-section-sub#user-info-items #login-link{
+        border-bottom: 1px solid var(--darkBlack);
+        min-width: 65px !important;
+      }
+      .header-section-sub#logo-items #logo-icon{
+        background: url('./src/img/icons/brand/pineapple-icon.png') no-repeat center center;
+        height: 50px;
+        min-width: 50px;
+        background-size: contain;
+      }
+      .header-section-sub#user-info-items #user-icon{
+        background: url('../components/component_src/img/utility/user.svg') no-repeat center center;
+        background-color: var(--transpGreen);
+        margin: 5px;
+        height: 36px;
+        min-width: 35px;
+        border-radius: 25px;
+        box-shadow: 0px 1px 2px 1px var(--mainBlack);
+
+
+        background-size: cover;
+      }
+      @media (max-width: 775px) { 
+        .header-section-main .banner-button#browse-button{
+          display: none;
+        }
+        .header-section-main .banner-button#orders-button{
+          display: none;
+        }
+        .header-section-main {
+          justify-content: space-evenly !important;
+          min-width: 30%;
+          max-width: 450px;
+        }
+        .header-section-main .banner-button#icon-button{
+          width: 40%;
+          min-width: 40px;
+        }
+        .header-section-sub{
+          justify-content: right;
+          width: fit-content;
+          padding: 0 4vw;
+        }
+        .header-section-sub#user-info-items #login-link{
+          min-width: fit-content;
+        }
+        .header-section-sub#logo-items{
+          padding-left: 5px;
+          min-width: fit-content;
+        }
+        
+      }
+
+      @media (max-width: 1000px) {
+        div#logo-items.header-section-sub{
+          width: fit-content;
+          min-width: 60px;
+        }
+        div#user-info-items.header-section-sub{
+          width: fit-content;
+          min-width: 190px;
+        }
+        .header-section-main{
+          align-items: center;
+          justify-content: center;
+          gap: 10%;
+        }
+      }
+
+
+
